@@ -1,0 +1,73 @@
+main {
+	height: 100vh;
+    width: 85vw;
+}
+
+.home-background {
+
+    height: 90%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // margin-top: 7.5%;
+    // margin-bottom: 7.5%;
+    position: absolute;
+    transform: translate(0%, 5%);
+    // left: 62%;
+    // top: 48%;
+    color: white;
+    font-size: 19px;
+    line-height: 21px;
+
+    @include greater_than_laptop {
+        width: 95%;
+    }
+
+    @include tablet {
+        font-size: 45px;
+        line-height: 47px;
+    }
+
+    @include laptop {
+        font-size: 45px;
+        line-height: 47px;
+    }
+
+    @include desktop {
+        font-size: 64px;
+        line-height: 66px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+	// height: 80%;
+ //    width: 80%;
+ //    background-repeat: no-repeat;
+ //    background-size: cover;
+ //    background-position: center;
+ //    margin: 50px;
+ //    // height: 80%;
+ //    position: absolute;
+ //    transform: translate(-50%,-50%);
+ //    left: 50%;
+ //    top: 50%;
+ //    color: white;
+ //    font-size: 32px;
+ //    line-height: 36px;
+ //    display: flex;
+ //    flex-direction: column;
+ //    justify-content: center;
+
+    h1, p {
+    	width: 60%;
+   		margin: 0 auto;
+
+    }
+    p {
+    	margin: 50px auto 0;
+    	font-family: lars-thin;
+    }
+}

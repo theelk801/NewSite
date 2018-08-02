@@ -4,6 +4,10 @@
 # Until blog is ready
 _posts/
 
+# Hiding assets for now
+
+assets/
+
 ### Jekyll ###
 _site/
 .sass-cache/

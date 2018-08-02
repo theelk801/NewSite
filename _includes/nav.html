@@ -1,0 +1,18 @@
+<nav class="main-nav" id="mainNav">
+	<ul class="nav-links">
+		<li><a href="{{ "projects" | absolute_url }}">Projects<img src="{{ "assets/nav_link_arrow.svg" | absolute_url }}"></a></li>
+		<li><a href="{{ "research" | absolute_url }}">Research<img src="{{ "assets/nav_link_arrow.svg" | absolute_url }}"></a></li>
+		<li><a href="{{ "blog" | absolute_url }}">Blog<img src="{{ "assets/nav_link_arrow.svg" | absolute_url }}"></a></li>
+		<li><a href="{{ "about" | absolute_url }}">About<img src="{{ "assets/nav_link_arrow.svg" | absolute_url }}"></a></li>
+	</ul>
+	<div class="menu-button__wrapper">
+		<h1 id="menuButton">Menu</h1>
+	</div>
+	<script type="text/javascript">
+		var menuButton = document.getElementById("menuButton");
+		var mainNav = document.getElementById("mainNav");
+		menuButton.addEventListener("click", function(){
+			mainNav.classList.toggle("main-nav__show");
+		})
+	</script>
+</nav>

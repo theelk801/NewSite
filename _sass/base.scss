@@ -1,0 +1,62 @@
+$blue: #0018FF;
+$light-blue: #DFE2FF;
+
+$tablet-width: 700px;//changed from 768
+$laptop-width: 1024px;
+$desktop-width: 1440px;
+$fourk-width: 1920px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$fourk-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin fourk {
+  @media (min-width: #{$fourk-width}) {
+    @content;
+  }
+}
+
+@mixin greater_than_tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin greater_than_laptop {
+  @media (min-width: #{$laptop-width}) {
+    @content;
+  }
+}
+
+body {
+	font: 24px/24px "Lars-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: $blue;
+}
+
+main {
+	width: 80vw;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}

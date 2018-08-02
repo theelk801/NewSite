@@ -1,0 +1,26 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
+	{% capture style %}{% include home.scss %}{% endcapture %}
+	  <style type="text/css">
+	    @font-face {
+	      font-family: "Lars-Light";
+	      src: local("☺︎"),
+	        url("{{ 'assets/fonts/Lars-Light.woff' | absolute_url }}") format("woff"),
+	        url("{{ 'assets/fonts/Lars-Light.otf' | absolute_url }}") format("opentype"),
+	        url("{{ 'assets/fonts/Lars-Light.eot' | absolute_url }}"),
+	        url("{{ 'assets/fonts/Lars-Light.eot' | absolute_url }}?#iefix") format("embedded-opentype"),
+	        url("{{ 'assets/fonts/Lars-Light.ttf' | absolute_url }}") format("truetype");
+	    }
+	    @font-face {
+	      font-family: "Lars-Thin";
+	      src: local("☺︎"),
+	        url("{{ 'assets/fonts/Lars-Thin.woff' | absolute_url }}") format("woff"),
+	        url("{{ 'assets/fonts/Lars-Thin.otf' | absolute_url }}") format("opentype"),
+	        url("{{ 'assets/fonts/Lars-Thin.eot' | absolute_url }}"),
+	        url("{{ 'assets/fonts/Lars-Thin.eot' | absolute_url }}?#iefix") format("embedded-opentype"),
+	        url("{{ 'assets/fonts/Lars-Thin.ttf' | absolute_url }}") format("truetype");
+	    }
+	  </style>
+	<style type="text/css">{{ style | scssify }}</style>
+</head>
