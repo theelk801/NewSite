@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/osx,jekyll,sublimetext
 
+# Until blog is ready
+_posts/
+
 ### Jekyll ###
 _site/
 .sass-cache/
