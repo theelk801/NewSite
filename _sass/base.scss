@@ -49,9 +49,7 @@ body {
 
 main {
 	width: 80vw;
-	position: absolute;
-	top: 0;
-	right: 0;
+  margin-left: 15vw;
 }
 
 @mixin transition($transition...) {
@@ -59,4 +57,8 @@ main {
   -moz-transition: $transition;
   -o-transition: $transition;
   transition: $transition;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

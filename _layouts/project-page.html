@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+{% capture style %}{% include project-page-bundle.scss %}{% endcapture %}
+{% include head.html %}
+<body>
+{% include header.html %}
+<main>
+	<img src="{{ "assets/project_square.png" | absolute_url }}">
+	<h1>Using Machine Learning to discover a new way to organize music.</h1>
+	<p>{{ page.content }}</p>
+	<p>{{ page.content }}</p>
+</main>
+</body>
+</html>

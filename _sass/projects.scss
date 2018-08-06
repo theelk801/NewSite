@@ -1,0 +1,133 @@
+header {
+	display: block;
+	width: 68vw;
+	position: absolute;
+	top: 37px;
+	left: 30vw;
+
+	@include tablet {
+		top: 88px;
+	}
+
+	@include laptop {
+		top: 88px;
+		left: 24vw;
+	}
+
+	@include desktop {
+		top: 124px;
+		left: 24vw;
+	}
+
+	h1 {
+		font-size: 19px;
+		line-height: 21px;
+
+		@include tablet {
+			font-size: 45px;
+			line-height: 47px;
+		}
+
+		@include laptop {
+			font-size: 45px;
+			line-height: 47px;
+		}
+		@include desktop {
+			font-size: 64px;
+			line-height: 66px;
+		}
+	}
+}
+
+.project_collections {
+    width: 68vw;
+    margin: 30vw 0 0 30vw;
+
+	@include tablet {
+		top: 220px;
+	}
+
+	@include laptop {
+		top: 220px;
+		left: 24vw;
+	    margin: 20vw 0 0 24vw;
+	}
+
+	@include desktop {
+		top: 325px;
+		left: 24vw;
+	    margin: 20vw 0 0 24vw;
+	}
+
+    ul {
+		display: flex;
+	    flex-direction: column;
+
+		@include greater_than_laptop {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		li {
+			@include greater_than_laptop {
+				width: 34vw;
+				margin: 65px 0 65px 0;
+				display: flex;
+			    flex-direction: column-reverse;
+			}
+		}
+	}
+    ul li a {
+    	// display: flex;
+    	flex-direction: column;
+    	font-size: 19px;
+    	line-height: 21px;
+
+    	@include tablet {
+			font-size: 45px;
+			line-height: 47px;
+		}
+
+		@include laptop {
+			font-size: 45px;
+			line-height: 47px;
+		}
+
+		@include desktop {
+			font-size: 64px;
+			line-height: 66px;
+		}
+
+    	img, h1 {
+    		justify-content: center;
+    		margin: 15px 0 15px 0;
+
+    		@include tablet {
+    			margin: 25px 0 25px 0;
+    		}
+    		// width: 68%;
+    	}
+	    img {
+	    	width: 68%;
+
+	    	@include greater_than_laptop {
+	    		margin: 0;
+	    		width: 64%
+	    	}
+	    	// @include greater_than_laptop {
+	    	// 	width: 32%;
+	    	// }
+	    }
+	    h1 {
+	    	width: 45%;
+
+	    	@include laptop {
+	    		margin: 0 0 65px;
+	    	}
+
+	    	@include desktop {
+	    		margin: 0 0 88px;
+	    	}
+	    }
+	}
+}

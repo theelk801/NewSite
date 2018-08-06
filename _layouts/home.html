@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+{% capture style %}{% include home-bundle.scss %}{% endcapture %}
 {% include head.html %}
 <body>
 {% include header.html %}
 <main>
 	<article class="home-background" style="background-image: url('{{ 'assets/home_bg.png' | absolute_url }}')">
-		<h1>Hi, I'm Evan Kranzler</h1>
+		<h1>Hi, I'm Evan Kranzler.</h1>
 		<p>I’m a mathematician and data scientist working at the intersection of machine learning and creativity.</p>
 		<p>{{ page.content }}</p>
 	</article>
