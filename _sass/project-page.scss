@@ -39,7 +39,36 @@ header {
 	}
 }
 
-main {
+.back-button {
+	a img {
+		color: $blue;
+		position: absolute;
+		left: 15vw;
+		top: 46px;
+		width: 35px;
+
+		@include greater_than_laptop {
+			left: 13vw;
+		}
+
+		@include tablet {
+			top: 110px;
+			width: 80px;
+		}
+
+		@include laptop {
+			top: 110px;
+			width: 80px;
+		}
+
+		@include desktop {
+			top: 156px;
+			width: 110px;
+		}
+	}
+}
+
+.project-content {
 	display: flex;
 	flex-direction: column;
 	width: 70vw;
