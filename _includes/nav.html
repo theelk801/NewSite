@@ -1,5 +1,5 @@
 <nav class="main-nav" id="mainNav">
-	<ul class="nav-links">
+	<ul class="nav-links" id="navLinks">
 		<li><a href="{{ "projects" | absolute_url }}">Projects <img src="{{ "assets/nav/link_arrow.svg" | absolute_url }}"></a></li>
 		<li><a href="{{ "research" | absolute_url }}">Research <img src="{{ "assets/nav/link_arrow.svg" | absolute_url }}"></a></li>
 		<li><a href="{{ "blog" | absolute_url }}">Blog <img src="{{ "assets/nav/link_arrow.svg" | absolute_url }}"></a></li>
@@ -12,9 +12,11 @@
 		var menuButton = document.getElementById("menuButton");
 		var mainNav = document.getElementById("mainNav");
 		var menuTriangle = document.getElementById("menuTriangle");
+		var navLinks = document.getElementById("navLinks")
 		menuButton.addEventListener("click", function(){
 			mainNav.classList.toggle("main-nav__show");
 			menuTriangle.classList.toggle("menu-triangle__spin");
+			navLinks.classList.toggle("nav-links__show");
 			document.body.classList.toggle("overflow-hidden");
 		})
 	</script>

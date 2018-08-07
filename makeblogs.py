@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from random import randint
+from random import randint, random
 import lorem
 
 def format_date(date):
@@ -16,8 +16,13 @@ now = datetime.now()
 for _ in range(40):
 	date = now - timedelta(randint(1, 365))
 	title = lorem.sentence()
+	paragraph = lorem.paragraph()
 	body = lorem.text()
-	s = f'---\nlayout: post\ntitle: "{title}"\n---\n\n{body}'
+	if random() >= 0.4:
+		image = '![A cool-looking gradient]({{ "assets/project_square.png" | absolute_url }})\n'
+	else:
+		image = ''
+	s = f'---\nlayout: post\ntitle: "{title}"\n---\n\n{image}\n{paragraph}\n\n<!--more-->\n\n{body}'
 
 	with open(f'./_posts/{format_date(date)}-{format_title(title)}.md', 'w') as file:
 		file.write(s)

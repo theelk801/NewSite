@@ -1,13 +1,40 @@
 <html>
-
+{% capture style %}{% include blog-bundle.scss %}{% endcapture %}
+{% include head.html %}
 <body>
-<!-- {% include header.html %} -->
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-</body>
+{% include header.html %}
+<!-- This loops through the paginated posts -->
+<main><ul class="blog-posts">
+	{% for post in paginator.posts %}
+	<li class="blog-item	">
+	  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+	  <span class="date">{{ post.date | date: "%m/%d/%y" }}</span>
+	  <div class="content">
+	    {{ post.excerpt }}
+	  </div>
+	</li>
+	{% endfor %}
+</ul></main>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+    </a>
+  {% else %}
+    <span class="previous">
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+    </span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+    </a>
+  {% else %}
+    <span class="next ">
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+    </span>
+  {% endif %}
+</div></body>
 </html>

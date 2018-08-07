@@ -23,8 +23,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  theelk801
 
 # Build settings
-paginate: 5
+paginate: 2
 paginate_path: "/blog/page:num/"
+excerpt_separator: <!--more-->
 
 markdown: kramdown
 include:
