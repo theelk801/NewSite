@@ -50,6 +50,10 @@ body {
 main {
 	width: 80vw;
   margin-left: 15vw;
+
+  @include greater_than_laptop {
+    margin-left: 12vw;
+  }
 }
 
 @mixin transition($transition...) {

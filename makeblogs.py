@@ -15,7 +15,7 @@ now = datetime.now()
 
 for _ in range(40):
 	date = now - timedelta(randint(1, 365))
-	title = lorem.sentence()
+	title = lorem.sentence()[:-1]
 	paragraph = lorem.paragraph()
 	body = lorem.text()
 	if random() >= 0.4:

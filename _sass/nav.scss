@@ -36,7 +36,7 @@ $easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     	// 	}	    	
 	    // }
 	    opacity: 0;
-	    @include transition(opacity $ease-speed ease);
+	    @include transition(opacity $ease-speed ease 0.1s);
 		width: 100vw;
 	    margin: 8px 0 8px 20px;
 

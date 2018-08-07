@@ -1,0 +1,176 @@
+main {
+	width: 75vw;
+	margin-right: 0;
+
+	@include tablet {
+		width: 70vw;
+	}
+
+	@include laptop {
+		width: 65vw;
+	}
+
+	@include desktop {
+		width: 65vw;
+	}
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	margin-left: 15vw;
+	margin-top: 40px;
+
+	@include tablet {
+		margin-top: 80px;
+	}
+
+	@include laptop {
+		margin-top: 80px;
+		margin-left: 12vw;
+	}
+
+	@include desktop {
+		margin-top: 130px;
+		margin-left: 12vw;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 16px;
+		margin-bottom: 20px;
+
+		@include tablet {
+			font-size: 17px;
+			line-height: 19px;
+		}
+
+		@include laptop {
+			font-size: 17px;
+			line-height: 19px;
+		}
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 26px;
+			margin-bottom: 25px;
+		}
+	}
+
+	p img {
+		width: 55vw;
+		margin-bottom: 55px;
+
+		@include laptop {
+			width: 40vw;
+			margin-bottom: 80px;
+		}
+
+		@include desktop {
+			width: 40vw;
+			margin-bottom: 100px;
+		}
+	}
+}
+
+.title-date {
+	display: flex;
+	flex-direction: column;
+	
+	@include greater_than_tablet {
+		flex-direction: row;
+		margin-bottom: 70px;
+		justify-content: space-between;
+	}
+
+	@include desktop {
+		margin-bottom: 140px;
+	}
+
+	h1 {
+		font-size: 19px;
+		line-height: 21px;
+		margin-bottom: 10px;
+
+		@include tablet {
+			font-size: 45px;
+			line-height: 47px;
+			width: 40vw;
+			margin-bottom: 0;
+		}
+
+		@include laptop {
+			font-size: 45px;
+			line-height: 47px;
+			width: 60vw;
+			margin-bottom: 0;
+		}
+
+		@include desktop {
+			font-size: 64px;
+			line-height: 66px;
+			width: 80vw;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.back-button {
+	a img {
+		color: $blue;
+		position: absolute;
+		left: 15vw;
+		top: 46px;
+		width: 35px;
+
+		@include greater_than_laptop {
+			left: 13vw;
+		}
+
+		@include tablet {
+			top: 110px;
+			width: 80px;
+		}
+
+		@include laptop {
+			top: 110px;
+			width: 80px;
+		}
+
+		@include desktop {
+			top: 156px;
+			width: 110px;
+		}
+	}
+}
+
+.date {
+	margin-bottom: 40px;
+
+	@include greater_than_tablet{
+		display: flex;
+		flex-direction: column-reverse;
+		margin-bottom: 0;
+		margin-right: 2	vw;
+	}
+
+	span {
+		font-size: 14px;
+		line-height: 16px;
+
+		@include tablet {
+			font-size: 17px;
+			line-height: 25px;
+		}
+
+		@include laptop {
+			font-size: 17px;
+			line-height: 25px;
+		}
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+}

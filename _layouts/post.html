@@ -1,11 +1,19 @@
 <html>
-
+{% capture style %}{% include post-bundle.scss %}{% endcapture %}
+{% include head.html %}
 <body>
-{% include header.html %}
-<main>
-	<h1>{{ page.title }}</h1>
-
+{% include nav.html %}
+<main><article class="main-content">
+	<div class="title-date">
+	  <div class="back-button">
+	    <a href="{{ "blog" | absolute_url }}">
+		<img src="{{ "assets/back-arrow.svg" | absolute_url }}">
+	    </a>
+	  </div>
+	  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+	  <div class="date"><span>{{ page.date | date: "%m/%d/%y" }}</span></div>
+	</div>
 	{{ page.content }}
-</main>
+</main></article>
 </body>
 </html>
