@@ -1,4 +1,4 @@
-$ease-speed: 0.6s;
+$ease-speed: 0.5s;
 // $menuItems: 4;
 $easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
@@ -32,7 +32,7 @@ $easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     li{
     	// @for $i from 1 through $menuItems {
     	// 	&:nth-child(#{$i}) {
-    	// 		@include transition(opacity 1s ease #{.25 * $i}s);
+    	// 		@include transition(opacity 1s ease #{.1 * $i}s);
     	// 	}	    	
 	    // }
 	    opacity: 0;

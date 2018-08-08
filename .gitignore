@@ -2,11 +2,11 @@
 # Created by https://www.gitignore.io/api/osx,jekyll,sublimetext
 
 # Until blog is ready
-_posts/
+# _posts/
 
 # Hiding assets for now
 
-assets/
+# assets/
 
 ### Jekyll ###
 _site/

@@ -120,7 +120,7 @@ main {
 		color: $blue;
 		position: absolute;
 		left: 15vw;
-		top: 46px;
+		top: 50px;
 		width: 35px;
 
 		@include greater_than_laptop {
@@ -128,12 +128,12 @@ main {
 		}
 
 		@include tablet {
-			top: 110px;
+			top: 100px;
 			width: 80px;
 		}
 
 		@include laptop {
-			top: 110px;
+			top: 100px;
 			width: 80px;
 		}
 

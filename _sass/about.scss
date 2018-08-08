@@ -32,6 +32,34 @@ header {
 	@include greater_than_laptop {
 		margin-bottom: 20vh;
 	}
+	
+	p {
+		width: 55vw;
+		font-size: 14px;
+		line-height: 16px;
+		margin: 0 28px 20px 0;
+
+		@include tablet {
+			width: 45vw;
+			font-size: 17px;
+			line-height: 19px;
+			margin: 40px 28px 0 0;
+		}
+
+		@include laptop {
+			width: 45vw;
+			font-size: 17px;
+			line-height: 19px;
+			margin: 40px 28px 0 0;
+		}
+
+		@include desktop {
+			width: 45vw;
+			font-size: 24px;
+			line-height: 26px;
+			margin: 60px 28px 0 0;
+		}
+	}
 }
 
 header, .about-content {
@@ -66,33 +94,5 @@ header, .about-content {
 			font-size: 64px;
 			line-height: 66px;
 		}
-	}
-}
-
-.about-content p {
-	width: 55vw;
-	font-size: 14px;
-	line-height: 16px;
-	margin: 0 28px 20px 0;
-
-	@include tablet {
-		width: 45vw;
-		font-size: 17px;
-		line-height: 19px;
-		margin: 40px 28px 0 0;
-	}
-
-	@include laptop {
-		width: 45vw;
-		font-size: 17px;
-		line-height: 19px;
-		margin: 40px 28px 0 0;
-	}
-
-	@include desktop {
-		width: 45vw;
-		font-size: 24px;
-		line-height: 26px;
-		margin: 60px 28px 0 0;
 	}
 }
