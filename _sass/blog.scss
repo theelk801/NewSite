@@ -186,15 +186,15 @@ header {
 	margin: -7vh 15vw 5vh 28vw;
 
 	@include tablet {
-		margin: 7vh 15vw 20vh 30vw;
+		margin: 7vh 10vw 20vh 25vw;
 	}
 
 	@include laptop {
-		margin: 21vh 20vw 20vh 24vw;
+		margin: 21vh 15vw 20vh 19vw;
 	}
 
 	@include desktop {
-		margin: 21vh 20vw 20vh 24vw;
+		margin: 21vh 15vw 20vh 19vw;
 	}
 
 	span {
@@ -220,4 +220,45 @@ header {
 
 .next img {
 	transform: rotate(180deg);
+}
+
+.page-number {
+	opacity: 0;
+}
+
+.previous, .next, .current-page {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	h1 {
+		font-size: 10px;
+		line-height: 18px;
+		margin: 0 2vw 0 2vw;
+
+		@include tablet {
+			font-size: 17px;
+			line-height: 19px;
+		}
+
+		@include laptop {
+			font-size: 17px;
+			line-height: 19px;
+			margin: 0 2vw 2px 2vw;
+		}
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 26px;
+			margin: 0 2vw 2px 2vw;
+		}
+	}
+	
+	&:hover {
+		@include greater_than_laptop {
+			h1 {
+				opacity: 1;
+			}
+		}
+	}
 }
