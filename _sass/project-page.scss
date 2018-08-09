@@ -71,59 +71,39 @@ header {
 .project-content {
 	display: flex;
 	flex-direction: column;
-	width: 70vw;
+	width: auto;
 	margin: 30vw 0 0 30vw;
 
 	@include laptop {
-		margin: 30vw 0 0 47vw;
+		margin: 30vw 0 0 24vw;
 	}
 
 	@include desktop {
-		width: 50vw;
-		margin: 30vw 0 0 47vw;
-	}
-
-	img{
-		width: 67vw;
-		margin: 0 0 63px 3vw;
-
-		@include tablet {
-			margin: 0 0 150px 3vw;
-		}
-
-		@include laptop {
-			width: 50vw;
-			margin: 0 0 150px 3vw;
-		}
-
-		@include desktop {
-			width: 50vw;
-			margin: 0 0 210px 3vw;
-		}
+		margin: 30vw 0 0 24vw;
 	}
 
 	h1 {
 		width: 48vw;
 		font-size: 19px;
 		line-height: 21px;
-		margin: 0 0 32px 2vw;
+		margin-bottom: 32px;
 
 		@include tablet {
 			font-size: 45px;
 			line-height: 47px;
-			margin: 0 0 60px 2vw;
+			margin-bottom: 60px;
 		}
 
 		@include laptop {
 			font-size: 45px;
 			line-height: 47px;
-			margin: 0 0 60px -20vw;
+			margin-bottom: 75px;
 		}
 
 		@include desktop {
 			font-size: 64px;
 			line-height: 66px;
-			margin: 0 0 60px -20vw;
+			margin-bottom: 70px;
 		}
 	}
 
@@ -131,27 +111,46 @@ header {
 		width: 55vw;
 		font-size: 14px;
 		line-height: 16px;
-		margin: 0 28px 20px 2vw;
+		margin-bottom: 20px;
 
 		@include tablet {
 			width: 45vw;
 			font-size: 17px;
 			line-height: 19px;
-			margin: 40px 28px 0 2vw;
+			margin-bottom: 28px;
 		}
 
 		@include laptop {
 			width: 45vw;
 			font-size: 17px;
 			line-height: 19px;
-			margin: 40px 28px 0 -20vw;
+			margin-bottom: 50px;
 		}
 
 		@include desktop {
 			width: 45vw;
 			font-size: 24px;
 			line-height: 26px;
-			margin: 60px 28px 0 -20vw;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.project-image {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-bottom: 19vw;
+
+	@include laptop {
+		margin-bottom: 150px;
+	}
+
+	img {
+		width: 67vw;
+		align-self: center;
+
+		@include greater_than_laptop {
+			width: 50vw;
 		}
 	}
 }

@@ -48,10 +48,11 @@ body {
 }
 
 main {
-	width: 80vw;
+	width: 85vw;
   margin-left: 15vw;
 
   @include greater_than_laptop {
+    width: 88vw;
     margin-left: 12vw;
   }
 }

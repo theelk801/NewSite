@@ -1,4 +1,8 @@
 header {
+	display: block;
+	width: 68vw;
+	position: absolute;
+	left: 30vw;
 	top: 40px;
 
 	@include tablet {
@@ -6,74 +10,13 @@ header {
 	}
 
 	@include laptop {
+		left: 24vw;
 		top: 88px;
 	}
 
 	@include desktop {
+		left: 24vw;
 		top: 124px;
-	}
-}
-
-.about-content {
-	top: 127px;
-
-	@include tablet {
-		top: 300px;
-	}
-
-	@include laptop {
-		top: 300px;
-	}
-
-	@include desktop {
-		top: 420px;
-	}
-
-	@include greater_than_laptop {
-		margin-bottom: 20vh;
-	}
-	
-	p {
-		width: 55vw;
-		font-size: 14px;
-		line-height: 16px;
-		margin: 0 28px 20px 0;
-
-		@include tablet {
-			width: 45vw;
-			font-size: 17px;
-			line-height: 19px;
-			margin: 40px 28px 0 0;
-		}
-
-		@include laptop {
-			width: 45vw;
-			font-size: 17px;
-			line-height: 19px;
-			margin: 40px 28px 0 0;
-		}
-
-		@include desktop {
-			width: 45vw;
-			font-size: 24px;
-			line-height: 26px;
-			margin: 60px 28px 0 0;
-		}
-	}
-}
-
-header, .about-content {
-	display: block;
-	width: 68vw;
-	position: absolute;
-	left: 30vw;
-
-	@include laptop {
-		left: 24vw;
-	}
-
-	@include desktop {
-		left: 24vw;
 	}
 
 	h1 {
@@ -95,4 +38,62 @@ header, .about-content {
 			line-height: 66px;
 		}
 	}
+}
+
+.about-content {
+	display: flex;
+	flex-direction: column;
+	// width: 68vw;
+	margin-left: 15vw;
+	margin-top: 127px;
+
+	@include tablet {
+		margin-top: 300px;
+	}
+
+	@include laptop {
+		margin-left: 12vw;
+		margin-top: 300px;
+	}
+
+	@include desktop {
+		margin-left: 12vw;
+		margin-top: 420px;
+	}
+
+	@include greater_than_laptop {
+		margin-bottom: 40vh;
+	}
+	
+	p {
+		width: 55vw;
+		font-size: 14px;
+		line-height: 16px;
+		margin-bottom: 20px;
+
+		@include tablet {
+			width: 45vw;
+			font-size: 17px;
+			line-height: 19px;
+			margin: 40px 0 0 0;
+		}
+
+		@include laptop {
+			width: 45vw;
+			font-size: 17px;
+			line-height: 19px;
+			margin: 40px 0 0 0;
+		}
+
+		@include desktop {
+			width: 45vw;
+			font-size: 24px;
+			line-height: 26px;
+			margin: 60px 0 0 0;
+		}
+	}
+}
+
+header, .about-content {
+
 }

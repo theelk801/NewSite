@@ -40,7 +40,7 @@ header {
 }
 
 .project_collections {
-    width: 68vw;
+    // width: 68vw;
     margin: 30vw 0 0 30vw;
 
 	@include tablet {
@@ -69,16 +69,20 @@ header {
 		}
 
 		li {
+			display: flex;
+			flex-direction: column-reverse;
+
+			@include tablet {
+				width: 40vw;
+			}
+
 			@include greater_than_laptop {
-				width: 34vw;
-				margin: 65px 0 65px 0;
-				display: flex;
-			    flex-direction: column-reverse;
+				width: 30vw;
+				margin: 65px 8vw 65px 0;
 			}
 		}
 	}
     ul li a {
-    	// display: flex;
     	flex-direction: column;
     	font-size: 19px;
     	line-height: 21px;
@@ -105,22 +109,16 @@ header {
     		@include tablet {
     			margin: 25px 0 25px 0;
     		}
-    		// width: 68%;
     	}
 	    img {
-	    	width: 68%;
+	    	width: 45vw;
 
 	    	@include greater_than_laptop {
 	    		margin: 0;
-	    		width: 64%
+	    		width: 22vw;
 	    	}
-	    	// @include greater_than_laptop {
-	    	// 	width: 32%;
-	    	// }
 	    }
 	    h1 {
-	    	width: 45%;
-
 	    	@include laptop {
 	    		margin: 0 0 65px;
 	    	}
