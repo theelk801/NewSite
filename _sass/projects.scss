@@ -41,7 +41,9 @@ header {
 
 .project_collections {
     // width: 68vw;
-    margin: 30vw 0 0 30vw;
+    margin-top: 30vw;
+    margin-left: 30vw;
+    margin-bottom: 10vw;
 
 	@include tablet {
 		top: 220px;
@@ -49,14 +51,16 @@ header {
 
 	@include laptop {
 		top: 220px;
-		left: 24vw;
-	    margin: 20vw 0 0 24vw;
 	}
 
 	@include desktop {
 		top: 325px;
+	}
+
+	@include greater_than_laptop{
 		left: 24vw;
-	    margin: 20vw 0 0 24vw;
+	    margin-top: 20vw;
+	    margin-left: 24vw;
 	}
 
     ul {

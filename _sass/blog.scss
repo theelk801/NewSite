@@ -224,6 +224,7 @@ header {
 
 .page-number {
 	opacity: 0;
+	@include transition(opacity 0.15s ease);
 }
 
 .previous, .next, .current-page {
@@ -253,7 +254,7 @@ header {
 			margin: 0 2vw 2px 2vw;
 		}
 	}
-	
+
 	&:hover {
 		@include greater_than_laptop {
 			h1 {
