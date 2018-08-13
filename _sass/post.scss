@@ -176,3 +176,46 @@ main {
 		}
 	}
 }
+
+.pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 0 5vh 15vw;
+
+	@include tablet {
+		margin: 20vh 0 20vh 15vw;
+	}
+
+	@include laptop {
+		margin: 21vh 8vw 20vh 12vw;
+	}
+
+	@include desktop {
+		margin: 21vh 8vw 20vh 12vw;
+	}
+
+	span {
+		opacity: 0;
+	}
+}
+
+.arrow {
+	width: 50px;
+
+	@include tablet {
+		width: 100px;
+	}
+
+	@include laptop {
+		width: 100px;
+	}
+
+	@include desktop {
+		width: 140px;
+	}
+}
+
+.next img {
+	transform: rotate(180deg);
+}

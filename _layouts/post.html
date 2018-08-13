@@ -14,6 +14,38 @@
 	  <div class="date"><span>{{ page.date | date: "%m/%d/%y" }}</span></div>
 	</div>
 	{{ page.content }}
-</article></main>
+</article>
+<div class="pagination">
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}" class="previous">
+      <h1 class="page-number">{{ paginator.previous_page }}</h1>
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+    </a>
+  {% else %}
+    <span class="previous">
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+    </span>
+  {% endif %}
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}" class="next">
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+      <h1 class="page-number">{{ paginator.next_page }}</h1>
+    </a>
+  {% else %}
+    <span class="next">
+    	<img src="{{ "assets/back-arrow.svg" | absolute_url }}" class="arrow">
+    </span>
+  {% endif %}
+</div>
+
+<!-- <div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}"><></a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+  {% endif %}
+</div> -->
+</main>
 </body>
 </html>
